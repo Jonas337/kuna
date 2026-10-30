@@ -10,7 +10,7 @@
   </volatile>
   
   <default_symbols>
-  
+
     <symbol name="BANK0_R0" address="INTMEM:00"/>
     <symbol name="BANK0_R1" address="INTMEM:01"/>
     <symbol name="BANK0_R2" address="INTMEM:02"/>
@@ -19,7 +19,7 @@
     <symbol name="BANK0_R5" address="INTMEM:05"/>
     <symbol name="BANK0_R6" address="INTMEM:06"/>
     <symbol name="BANK0_R7" address="INTMEM:07"/>
-    
+
     <symbol name="BANK1_R0" address="INTMEM:08"/>
     <symbol name="BANK1_R1" address="INTMEM:09"/>
     <symbol name="BANK1_R2" address="INTMEM:0a"/>
@@ -28,7 +28,7 @@
     <symbol name="BANK1_R5" address="INTMEM:0d"/>
     <symbol name="BANK1_R6" address="INTMEM:0e"/>
     <symbol name="BANK1_R7" address="INTMEM:0f"/>
-    
+
     <symbol name="BANK2_R0" address="INTMEM:10"/>
     <symbol name="BANK2_R1" address="INTMEM:11"/>
     <symbol name="BANK2_R2" address="INTMEM:12"/>
@@ -37,7 +37,7 @@
     <symbol name="BANK2_R5" address="INTMEM:15"/>
     <symbol name="BANK2_R6" address="INTMEM:16"/>
     <symbol name="BANK2_R7" address="INTMEM:17"/>
-    
+
     <symbol name="BANK3_R0" address="INTMEM:18"/>
     <symbol name="BANK3_R1" address="INTMEM:19"/>
     <symbol name="BANK3_R2" address="INTMEM:1a"/>
@@ -46,13 +46,15 @@
     <symbol name="BANK3_R5" address="INTMEM:1d"/>
     <symbol name="BANK3_R6" address="INTMEM:1e"/>
     <symbol name="BANK3_R7" address="INTMEM:1f"/>
-  
-    <!-- SAB 80C517/80C537 SFR map. DPSEL selects one of eight data pointers;
-         this spec names DPSEL but the decompiler still models the selected DP0. -->
+
+    <!-- SAB 80C517A/83C517A-5 SFR map. DPSEL selects one of eight data pointers;
+         the decompiler still models the selected DP0. -->
     <symbol name="P0" address="SFR:80"/>
     <symbol name="SP" address="SFR:81"/>
     <symbol name="DPL" address="SFR:82"/>
     <symbol name="DPH" address="SFR:83"/>
+    <symbol name="WDTL" address="SFR:84"/>
+    <symbol name="WDTH" address="SFR:85"/>
     <symbol name="WDTREL" address="SFR:86"/>
     <symbol name="PCON" address="SFR:87"/>
     <symbol name="TCON" address="SFR:88"/>
@@ -62,20 +64,31 @@
     <symbol name="TH0" address="SFR:8c"/>
     <symbol name="TH1" address="SFR:8d"/>
     <symbol name="P1" address="SFR:90"/>
+    <symbol name="XPAGE" address="SFR:91"/>
     <symbol name="DPSEL" address="SFR:92"/>
+    <symbol name="S0CON" address="SFR:98"/>
+    <symbol name="S0BUF" address="SFR:99"/>
     <symbol name="IEN2" address="SFR:9a"/>
     <symbol name="S1CON" address="SFR:9b"/>
     <symbol name="S1BUF" address="SFR:9c"/>
-    <symbol name="S1REL" address="SFR:9d"/>
-    <symbol name="SCON" address="SFR:98"/>
-    <symbol name="SBUF" address="SFR:99"/>
+    <symbol name="S1RELL" address="SFR:9d"/>
     <symbol name="P2" address="SFR:a0"/>
+    <symbol name="COMSETL" address="SFR:a1"/>
+    <symbol name="COMSETH" address="SFR:a2"/>
+    <symbol name="COMCLRL" address="SFR:a3"/>
+    <symbol name="COMCLRH" address="SFR:a4"/>
+    <symbol name="SETMSK" address="SFR:a5"/>
+    <symbol name="CLRMSK" address="SFR:a6"/>
     <symbol name="IEN0" address="SFR:a8"/>
     <symbol name="IP0" address="SFR:a9"/>
+    <symbol name="S0RELL" address="SFR:aa"/>
     <symbol name="P3" address="SFR:b0"/>
+    <symbol name="SYSCON" address="SFR:b1"/>
     <symbol name="IEN1" address="SFR:b8"/>
     <symbol name="IP1" address="SFR:b9"/>
-    <symbol name="IRCON" address="SFR:c0"/>
+    <symbol name="S0RELH" address="SFR:ba"/>
+    <symbol name="S1RELH" address="SFR:bb"/>
+    <symbol name="IRCON0" address="SFR:c0"/>
     <symbol name="CCEN" address="SFR:c1"/>
     <symbol name="CCL1" address="SFR:c2"/>
     <symbol name="CCH1" address="SFR:c3"/>
@@ -92,6 +105,7 @@
     <symbol name="CCL4" address="SFR:ce"/>
     <symbol name="CCH4" address="SFR:cf"/>
     <symbol name="PSW" address="SFR:d0"/>
+    <symbol name="IRCON1" address="SFR:d1"/>
     <symbol name="CML0" address="SFR:d2"/>
     <symbol name="CMH0" address="SFR:d3"/>
     <symbol name="CML1" address="SFR:d4"/>
@@ -99,10 +113,10 @@
     <symbol name="CML2" address="SFR:d6"/>
     <symbol name="CMH2" address="SFR:d7"/>
     <symbol name="ADCON0" address="SFR:d8"/>
-    <symbol name="ADDAT" address="SFR:d9"/>
-    <symbol name="DAPR" address="SFR:da"/>
-    <symbol name="ADCON1" address="SFR:db"/>
-    <symbol name="P7" address="SFR:dc"/>
+    <symbol name="ADDATH" address="SFR:d9"/>
+    <symbol name="ADDATL" address="SFR:da"/>
+    <symbol name="P7" address="SFR:db"/>
+    <symbol name="ADCON1" address="SFR:dc"/>
     <symbol name="P8" address="SFR:dd"/>
     <symbol name="CTRELL" address="SFR:de"/>
     <symbol name="CTRELH" address="SFR:df"/>
@@ -131,7 +145,7 @@
     <symbol name="CMSEL" address="SFR:f7"/>
     <symbol name="P5" address="SFR:f8"/>
     <symbol name="P6" address="SFR:fa"/>
-    
+
     <symbol name="20.0" address="BITS:00"/>
     <symbol name="20.1" address="BITS:01"/>
     <symbol name="20.2" address="BITS:02"/>
@@ -260,7 +274,7 @@
     <symbol name="2f.5" address="BITS:7d"/>
     <symbol name="2f.6" address="BITS:7e"/>
     <symbol name="2f.7" address="BITS:7f"/>
-    
+
     <symbol name="P0.0" address="BITS:80"/>
     <symbol name="P0.1" address="BITS:81"/>
     <symbol name="P0.2" address="BITS:82"/>
@@ -269,14 +283,6 @@
     <symbol name="P0.5" address="BITS:85"/>
     <symbol name="P0.6" address="BITS:86"/>
     <symbol name="P0.7" address="BITS:87"/>
-    <symbol name="IT0" address="BITS:88"/>
-    <symbol name="IE0" address="BITS:89"/>
-    <symbol name="IT1" address="BITS:8a"/>
-    <symbol name="IE1" address="BITS:8b"/>
-    <symbol name="TR0" address="BITS:8c"/>
-    <symbol name="TF0" address="BITS:8d"/>
-    <symbol name="TR1" address="BITS:8e"/>
-    <symbol name="TF1" address="BITS:8f"/>
     <symbol name="P1.0" address="BITS:90"/>
     <symbol name="P1.1" address="BITS:91"/>
     <symbol name="P1.2" address="BITS:92"/>
@@ -285,14 +291,6 @@
     <symbol name="P1.5" address="BITS:95"/>
     <symbol name="P1.6" address="BITS:96"/>
     <symbol name="P1.7" address="BITS:97"/>
-    <symbol name="RI" address="BITS:98"/>
-    <symbol name="TI" address="BITS:99"/>
-    <symbol name="RB8" address="BITS:9a"/>
-    <symbol name="TB8" address="BITS:9b"/>
-    <symbol name="REN" address="BITS:9c"/>
-    <symbol name="SM2" address="BITS:9d"/>
-    <symbol name="SM1" address="BITS:9e"/>
-    <symbol name="SM0" address="BITS:9f"/>
     <symbol name="P2.0" address="BITS:a0"/>
     <symbol name="P2.1" address="BITS:a1"/>
     <symbol name="P2.2" address="BITS:a2"/>
@@ -301,70 +299,14 @@
     <symbol name="P2.5" address="BITS:a5"/>
     <symbol name="P2.6" address="BITS:a6"/>
     <symbol name="P2.7" address="BITS:a7"/>
-    <symbol name="EX0" address="BITS:a8"/>
-    <symbol name="ET0" address="BITS:a9"/>
-    <symbol name="EX1" address="BITS:aa"/>
-    <symbol name="ET1" address="BITS:ab"/>
-    <symbol name="ES" address="BITS:ac"/>
-    <symbol name="ET2" address="BITS:ad"/>
-    <symbol name="EC" address="BITS:ae"/>
-    <symbol name="EA" address="BITS:af"/>
-    <symbol name="RXD" address="BITS:b0"/>
-    <symbol name="TXD" address="BITS:b1"/>
-    <symbol name="INT0" address="BITS:b2"/>
-    <symbol name="INT1" address="BITS:b3"/>
-    <symbol name="T0" address="BITS:b4"/>
-    <symbol name="T1" address="BITS:b5"/>
-    <symbol name="WR" address="BITS:b6"/>
-    <symbol name="RD" address="BITS:b7"/>
-    <symbol name="EADC" address="BITS:b8"/>
-    <symbol name="EX2" address="BITS:b9"/>
-    <symbol name="EX3" address="BITS:ba"/>
-    <symbol name="EX4" address="BITS:bb"/>
-    <symbol name="EX5" address="BITS:bc"/>
-    <symbol name="EX6" address="BITS:bd"/>
-    <symbol name="SWDT" address="BITS:be"/>
-    <symbol name="EXEN2" address="BITS:bf"/>
-    <symbol name="IADC" address="BITS:c0"/>
-    <symbol name="IEX2" address="BITS:c1"/>
-    <symbol name="IEX3" address="BITS:c2"/>
-    <symbol name="IEX4" address="BITS:c3"/>
-    <symbol name="IEX5" address="BITS:c4"/>
-    <symbol name="IEX6" address="BITS:c5"/>
-    <symbol name="TF2" address="BITS:c6"/>
-    <symbol name="EXF2" address="BITS:c7"/>
-    <symbol name="T2I0" address="BITS:c8"/>
-    <symbol name="T2I1" address="BITS:c9"/>
-    <symbol name="T2CM" address="BITS:ca"/>
-    <symbol name="T2R0" address="BITS:cb"/>
-    <symbol name="T2R1" address="BITS:cc"/>
-    <symbol name="I2FR" address="BITS:cd"/>
-    <symbol name="I3FR" address="BITS:ce"/>
-    <symbol name="T2PS" address="BITS:cf"/>
-    <symbol name="P" address="BITS:d0"/>
-    <symbol name="UD" address="BITS:d1"/>
-    <symbol name="OV" address="BITS:d2"/>
-    <symbol name="RS0" address="BITS:d3"/>
-    <symbol name="RS1" address="BITS:d4"/>
-    <symbol name="F0" address="BITS:d5"/>
-    <symbol name="AC" address="BITS:d6"/>
-    <symbol name="C" address="BITS:d7"/>
-    <symbol name="MX0" address="BITS:d8"/>
-    <symbol name="MX1" address="BITS:d9"/>
-    <symbol name="MX2" address="BITS:da"/>
-    <symbol name="ADM" address="BITS:db"/>
-    <symbol name="BSY" address="BITS:dc"/>
-    <symbol name="ADEX" address="BITS:dd"/>
-    <symbol name="ADCON0.6" address="BITS:de"/>
-    <symbol name="ADCON0.7" address="BITS:df"/>
-    <symbol name="ACC.0" address="BITS:e0"/>
-    <symbol name="ACC.1" address="BITS:e1"/>
-    <symbol name="ACC.2" address="BITS:e2"/>
-    <symbol name="ACC.3" address="BITS:e3"/>
-    <symbol name="ACC.4" address="BITS:e4"/>
-    <symbol name="ACC.5" address="BITS:e5"/>
-    <symbol name="ACC.6" address="BITS:e6"/>
-    <symbol name="ACC.7" address="BITS:e7"/>
+    <symbol name="P3.0" address="BITS:b0"/>
+    <symbol name="P3.1" address="BITS:b1"/>
+    <symbol name="P3.2" address="BITS:b2"/>
+    <symbol name="P3.3" address="BITS:b3"/>
+    <symbol name="P3.4" address="BITS:b4"/>
+    <symbol name="P3.5" address="BITS:b5"/>
+    <symbol name="P3.6" address="BITS:b6"/>
+    <symbol name="P3.7" address="BITS:b7"/>
     <symbol name="P4.0" address="BITS:e8"/>
     <symbol name="P4.1" address="BITS:e9"/>
     <symbol name="P4.2" address="BITS:ea"/>
@@ -373,14 +315,6 @@
     <symbol name="P4.5" address="BITS:ed"/>
     <symbol name="P4.6" address="BITS:ee"/>
     <symbol name="P4.7" address="BITS:ef"/>
-    <symbol name="B.0" address="BITS:f0"/>
-    <symbol name="B.1" address="BITS:f1"/>
-    <symbol name="B.2" address="BITS:f2"/>
-    <symbol name="B.3" address="BITS:f3"/>
-    <symbol name="B.4" address="BITS:f4"/>
-    <symbol name="B.5" address="BITS:f5"/>
-    <symbol name="B.6" address="BITS:f6"/>
-    <symbol name="B.7" address="BITS:f7"/>
     <symbol name="P5.0" address="BITS:f8"/>
     <symbol name="P5.1" address="BITS:f9"/>
     <symbol name="P5.2" address="BITS:fa"/>
@@ -389,7 +323,94 @@
     <symbol name="P5.5" address="BITS:fd"/>
     <symbol name="P5.6" address="BITS:fe"/>
     <symbol name="P5.7" address="BITS:ff"/>
-    
+    <symbol name="P" address="BITS:d0"/>
+    <symbol name="F1" address="BITS:d1"/>
+    <symbol name="OV" address="BITS:d2"/>
+    <symbol name="RS0" address="BITS:d3"/>
+    <symbol name="RS1" address="BITS:d4"/>
+    <symbol name="F0" address="BITS:d5"/>
+    <symbol name="AC" address="BITS:d6"/>
+    <symbol name="CY" address="BITS:d7"/>
+    <symbol name="IT0" address="BITS:88"/>
+    <symbol name="IE0" address="BITS:89"/>
+    <symbol name="IT1" address="BITS:8a"/>
+    <symbol name="IE1" address="BITS:8b"/>
+    <symbol name="TR0" address="BITS:8c"/>
+    <symbol name="TF0" address="BITS:8d"/>
+    <symbol name="TR1" address="BITS:8e"/>
+    <symbol name="TF1" address="BITS:8f"/>
+    <symbol name="EX0" address="BITS:a8"/>
+    <symbol name="ET0" address="BITS:a9"/>
+    <symbol name="EX1" address="BITS:aa"/>
+    <symbol name="ET1" address="BITS:ab"/>
+    <symbol name="ES0" address="BITS:ac"/>
+    <symbol name="ET2" address="BITS:ad"/>
+    <symbol name="WDT" address="BITS:ae"/>
+    <symbol name="EAL" address="BITS:af"/>
+    <symbol name="EADC" address="BITS:b8"/>
+    <symbol name="EX2" address="BITS:b9"/>
+    <symbol name="EX3" address="BITS:ba"/>
+    <symbol name="EX4" address="BITS:bb"/>
+    <symbol name="EX5" address="BITS:bc"/>
+    <symbol name="EX6" address="BITS:bd"/>
+    <symbol name="SWDT" address="BITS:be"/>
+    <symbol name="EXEN2" address="BITS:bf"/>
+    <symbol name="RXD" address="BITS:b0"/>
+    <symbol name="TXD" address="BITS:b1"/>
+    <symbol name="INT0" address="BITS:b2"/>
+    <symbol name="INT1" address="BITS:b3"/>
+    <symbol name="T0" address="BITS:b4"/>
+    <symbol name="T1" address="BITS:b5"/>
+    <symbol name="WR" address="BITS:b6"/>
+    <symbol name="RD" address="BITS:b7"/>
+    <symbol name="RI0" address="BITS:98"/>
+    <symbol name="TI0" address="BITS:99"/>
+    <symbol name="RB80" address="BITS:9a"/>
+    <symbol name="TB80" address="BITS:9b"/>
+    <symbol name="REN0" address="BITS:9c"/>
+    <symbol name="SM20" address="BITS:9d"/>
+    <symbol name="SM1" address="BITS:9e"/>
+    <symbol name="SM0" address="BITS:9f"/>
+    <symbol name="T2I0" address="BITS:c8"/>
+    <symbol name="T2I1" address="BITS:c9"/>
+    <symbol name="T2CM" address="BITS:ca"/>
+    <symbol name="T2R0" address="BITS:cb"/>
+    <symbol name="T2R1" address="BITS:cc"/>
+    <symbol name="I2FR" address="BITS:cd"/>
+    <symbol name="I3FR" address="BITS:ce"/>
+    <symbol name="T2PS" address="BITS:cf"/>
+    <symbol name="MX0" address="BITS:d8"/>
+    <symbol name="MX1" address="BITS:d9"/>
+    <symbol name="MX2" address="BITS:da"/>
+    <symbol name="ADM" address="BITS:db"/>
+    <symbol name="BSY" address="BITS:dc"/>
+    <symbol name="ADEX" address="BITS:dd"/>
+    <symbol name="CLK" address="BITS:de"/>
+    <symbol name="BD" address="BITS:df"/>
+    <symbol name="IADC" address="BITS:c0"/>
+    <symbol name="IEX2" address="BITS:c1"/>
+    <symbol name="IEX3" address="BITS:c2"/>
+    <symbol name="IEX4" address="BITS:c3"/>
+    <symbol name="IEX5" address="BITS:c4"/>
+    <symbol name="IEX6" address="BITS:c5"/>
+    <symbol name="TF2" address="BITS:c6"/>
+    <symbol name="EXF2" address="BITS:c7"/>
+    <symbol name="ACC.0" address="BITS:e0"/>
+    <symbol name="ACC.1" address="BITS:e1"/>
+    <symbol name="ACC.2" address="BITS:e2"/>
+    <symbol name="ACC.3" address="BITS:e3"/>
+    <symbol name="ACC.4" address="BITS:e4"/>
+    <symbol name="ACC.5" address="BITS:e5"/>
+    <symbol name="ACC.6" address="BITS:e6"/>
+    <symbol name="ACC.7" address="BITS:e7"/>
+    <symbol name="B.0" address="BITS:f0"/>
+    <symbol name="B.1" address="BITS:f1"/>
+    <symbol name="B.2" address="BITS:f2"/>
+    <symbol name="B.3" address="BITS:f3"/>
+    <symbol name="B.4" address="BITS:f4"/>
+    <symbol name="B.5" address="BITS:f5"/>
+    <symbol name="B.6" address="BITS:f6"/>
+    <symbol name="B.7" address="BITS:f7"/>
   </default_symbols>
   
   <default_memory_blocks>
