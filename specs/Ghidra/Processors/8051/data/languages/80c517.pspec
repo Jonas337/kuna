@@ -283,14 +283,14 @@
     <symbol name="P0.5" address="BITS:85"/>
     <symbol name="P0.6" address="BITS:86"/>
     <symbol name="P0.7" address="BITS:87"/>
-    <symbol name="P1.0" address="BITS:90"/>
-    <symbol name="P1.1" address="BITS:91"/>
-    <symbol name="P1.2" address="BITS:92"/>
-    <symbol name="P1.3" address="BITS:93"/>
-    <symbol name="P1.4" address="BITS:94"/>
-    <symbol name="P1.5" address="BITS:95"/>
-    <symbol name="P1.6" address="BITS:96"/>
-    <symbol name="P1.7" address="BITS:97"/>
+    <symbol name="INT3" address="BITS:90"/>
+    <symbol name="INT4" address="BITS:91"/>
+    <symbol name="INT5" address="BITS:92"/>
+    <symbol name="INT6" address="BITS:93"/>
+    <symbol name="INT2" address="BITS:94"/>
+    <symbol name="T2EX" address="BITS:95"/>
+    <symbol name="CLKOUT" address="BITS:96"/>
+    <symbol name="T2" address="BITS:97"/>
     <symbol name="P2.0" address="BITS:a0"/>
     <symbol name="P2.1" address="BITS:a1"/>
     <symbol name="P2.2" address="BITS:a2"/>
@@ -307,22 +307,22 @@
     <symbol name="P3.5" address="BITS:b5"/>
     <symbol name="P3.6" address="BITS:b6"/>
     <symbol name="P3.7" address="BITS:b7"/>
-    <symbol name="P4.0" address="BITS:e8"/>
-    <symbol name="P4.1" address="BITS:e9"/>
-    <symbol name="P4.2" address="BITS:ea"/>
-    <symbol name="P4.3" address="BITS:eb"/>
-    <symbol name="P4.4" address="BITS:ec"/>
-    <symbol name="P4.5" address="BITS:ed"/>
-    <symbol name="P4.6" address="BITS:ee"/>
-    <symbol name="P4.7" address="BITS:ef"/>
-    <symbol name="P5.0" address="BITS:f8"/>
-    <symbol name="P5.1" address="BITS:f9"/>
-    <symbol name="P5.2" address="BITS:fa"/>
-    <symbol name="P5.3" address="BITS:fb"/>
-    <symbol name="P5.4" address="BITS:fc"/>
-    <symbol name="P5.5" address="BITS:fd"/>
-    <symbol name="P5.6" address="BITS:fe"/>
-    <symbol name="P5.7" address="BITS:ff"/>
+    <symbol name="CM0" address="BITS:e8"/>
+    <symbol name="CM1" address="BITS:e9"/>
+    <symbol name="CM2" address="BITS:ea"/>
+    <symbol name="CM3" address="BITS:eb"/>
+    <symbol name="CM4" address="BITS:ec"/>
+    <symbol name="CM5" address="BITS:ed"/>
+    <symbol name="CM6" address="BITS:ee"/>
+    <symbol name="CM7" address="BITS:ef"/>
+    <symbol name="CCM0" address="BITS:f8"/>
+    <symbol name="CCM1" address="BITS:f9"/>
+    <symbol name="CCM2" address="BITS:fa"/>
+    <symbol name="CCM3" address="BITS:fb"/>
+    <symbol name="CCM4" address="BITS:fc"/>
+    <symbol name="CCM5" address="BITS:fd"/>
+    <symbol name="CCM6" address="BITS:fe"/>
+    <symbol name="CCM7" address="BITS:ff"/>
     <symbol name="P" address="BITS:d0"/>
     <symbol name="F1" address="BITS:d1"/>
     <symbol name="OV" address="BITS:d2"/>
