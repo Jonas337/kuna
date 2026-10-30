@@ -65,12 +65,12 @@
   <language processor="8051"
             endian="big"
             size="16"
-            variant="80c517a"
+            variant="80c517"
             version="1.0"
             slafile="8051.sla"
-            processorspec="80c517a.pspec"
-            id="8051:BE:16:80c517a">
-    <description>SAB 80C517A (M4.4) 8051 derivative</description>
+            processorspec="80c517.pspec"
+            id="8051:BE:16:80c517">
+    <description>Siemens SAB 80C517/80C537 8051 derivative</description>
     <compiler name="default" spec="8051.cspec" id="default"/>
   </language>
 </language_definitions>

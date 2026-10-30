@@ -834,7 +834,7 @@ fn ldefs_pspec_cspec_parse_matrix() {
     assert!(!descs.is_empty(), "ldefs scan found no language descriptions");
 
     // Three processors, by exact base language id.
-    let targets = ["x86:LE:64:default", "ARM:LE:32:v8", "MIPS:BE:32:default", "8051:BE:16:80c517a"];
+    let targets = ["x86:LE:64:default", "ARM:LE:32:v8", "MIPS:BE:32:default", "8051:BE:16:80c517"];
     let mut matched = 0usize;
     for target in targets {
         // resolveArchitecture finds the index; then build_spec_file resolves the
