@@ -62,4 +62,15 @@
     <description>Silicon Labs CIP-51 Microcontroller Family</description>
     <compiler name="default" spec="keil-cx51.cspec" id="default"/>
   </language>
+  <language processor="8051"
+            endian="big"
+            size="16"
+            variant="80c517a"
+            version="1.0"
+            slafile="8051.sla"
+            processorspec="80c517a.pspec"
+            id="8051:BE:16:80c517a">
+    <description>SAB 80C517A (M4.4) 8051 derivative</description>
+    <compiler name="default" spec="8051.cspec" id="default"/>
+  </language>
 </language_definitions>
