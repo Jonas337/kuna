@@ -1,0 +1,46 @@
+{
+  "schema": "re-probe/1",
+  "kind": "cli",
+  "cmd": [
+    "{{KUNA}}",
+    "decompile",
+    "{{BIN}}",
+    "0x0",
+    "--raw-image",
+    "--target",
+    "8051:BE:16:80c517",
+    "--base",
+    "0x0"
+  ],
+  "cwd": "{{WORK}}",
+  "env": {
+    "SLEIGHHOME": "{{SPECS}}"
+  },
+  "stdin": null,
+  "timeout_s": 60,
+  "repeat": 1,
+  "target": {
+    "binary_rel": "decompiler/crates/kuna-analysis/tests/fixtures/raw_8051_80c517_sfr",
+    "binary_sha256": "9cd3f389cb948294129929ff9ead1cbf80782be92f388430cd13989f3bb74183",
+    "binary_size": 6,
+    "binary_source": "in-repo",
+    "in_repo_path": "decompiler/crates/kuna-analysis/tests/fixtures/raw_8051_80c517_sfr",
+    "selector": "0x0",
+    "selector_kind": "addr"
+  },
+  "expect": {
+    "exit_code": {
+      "eq": 0
+    },
+    "stdout_matches": [
+      "CCEN = 0xf1;",
+      "CM1 = 0;"
+    ],
+    "stdout_absent": [
+      "FIFLG1",
+      "HIFLG",
+      "P4\\.1"
+    ]
+  },
+  "notes": "SAB 80C517A/80C537 SFR and bit names on the 6-byte witness MOV CCEN,#0F1h; CLR CM1; RET. Before the variant this decompiled as FIFLG1/HIFLG. CM1 is the C517A name for P4.1; it must not render as the generic CIP name."
+}
