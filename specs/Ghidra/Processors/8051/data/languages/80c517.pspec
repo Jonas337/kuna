@@ -47,6 +47,8 @@
     <symbol name="BANK3_R6" address="INTMEM:1e"/>
     <symbol name="BANK3_R7" address="INTMEM:1f"/>
   
+    <!-- SAB 80C517/80C537 SFR map. DPSEL selects one of eight data pointers;
+         this spec names DPSEL but the decompiler still models the selected DP0. -->
     <symbol name="P0" address="SFR:80"/>
     <symbol name="SP" address="SFR:81"/>
     <symbol name="DPL" address="SFR:82"/>
@@ -315,30 +317,30 @@
     <symbol name="T1" address="BITS:b5"/>
     <symbol name="WR" address="BITS:b6"/>
     <symbol name="RD" address="BITS:b7"/>
-    <symbol name="IEN1.0" address="BITS:b8"/>
-    <symbol name="IEN1.1" address="BITS:b9"/>
-    <symbol name="IEN1.2" address="BITS:ba"/>
-    <symbol name="IEN1.3" address="BITS:bb"/>
-    <symbol name="IEN1.4" address="BITS:bc"/>
-    <symbol name="IEN1.5" address="BITS:bd"/>
-    <symbol name="IEN1.6" address="BITS:be"/>
-    <symbol name="IEN1.7" address="BITS:bf"/>
-    <symbol name="IRCON.0" address="BITS:c0"/>
-    <symbol name="IRCON.1" address="BITS:c1"/>
-    <symbol name="IRCON.2" address="BITS:c2"/>
-    <symbol name="IRCON.3" address="BITS:c3"/>
-    <symbol name="IRCON.4" address="BITS:c4"/>
-    <symbol name="IRCON.5" address="BITS:c5"/>
-    <symbol name="IRCON.6" address="BITS:c6"/>
-    <symbol name="IRCON.7" address="BITS:c7"/>
-    <symbol name="CPRL2" address="BITS:c8"/>
-    <symbol name="CT2" address="BITS:c9"/>
-    <symbol name="TR2" address="BITS:ca"/>
-    <symbol name="EXEN2" address="BITS:cb"/>
-    <symbol name="TCLK" address="BITS:cc"/>
-    <symbol name="RCLK" address="BITS:cd"/>
-    <symbol name="EXF2" address="BITS:ce"/>
-    <symbol name="TF2" address="BITS:cf"/>
+    <symbol name="EADC" address="BITS:b8"/>
+    <symbol name="EX2" address="BITS:b9"/>
+    <symbol name="EX3" address="BITS:ba"/>
+    <symbol name="EX4" address="BITS:bb"/>
+    <symbol name="EX5" address="BITS:bc"/>
+    <symbol name="EX6" address="BITS:bd"/>
+    <symbol name="SWDT" address="BITS:be"/>
+    <symbol name="EXEN2" address="BITS:bf"/>
+    <symbol name="IADC" address="BITS:c0"/>
+    <symbol name="IEX2" address="BITS:c1"/>
+    <symbol name="IEX3" address="BITS:c2"/>
+    <symbol name="IEX4" address="BITS:c3"/>
+    <symbol name="IEX5" address="BITS:c4"/>
+    <symbol name="IEX6" address="BITS:c5"/>
+    <symbol name="TF2" address="BITS:c6"/>
+    <symbol name="EXF2" address="BITS:c7"/>
+    <symbol name="T2I0" address="BITS:c8"/>
+    <symbol name="T2I1" address="BITS:c9"/>
+    <symbol name="T2CM" address="BITS:ca"/>
+    <symbol name="T2R0" address="BITS:cb"/>
+    <symbol name="T2R1" address="BITS:cc"/>
+    <symbol name="I2FR" address="BITS:cd"/>
+    <symbol name="I3FR" address="BITS:ce"/>
+    <symbol name="T2PS" address="BITS:cf"/>
     <symbol name="P" address="BITS:d0"/>
     <symbol name="UD" address="BITS:d1"/>
     <symbol name="OV" address="BITS:d2"/>
@@ -347,12 +349,12 @@
     <symbol name="F0" address="BITS:d5"/>
     <symbol name="AC" address="BITS:d6"/>
     <symbol name="C" address="BITS:d7"/>
-    <symbol name="ADCON0.0" address="BITS:d8"/>
-    <symbol name="ADCON0.1" address="BITS:d9"/>
-    <symbol name="ADCON0.2" address="BITS:da"/>
-    <symbol name="ADCON0.3" address="BITS:db"/>
-    <symbol name="ADCON0.4" address="BITS:dc"/>
-    <symbol name="ADCON0.5" address="BITS:dd"/>
+    <symbol name="MX0" address="BITS:d8"/>
+    <symbol name="MX1" address="BITS:d9"/>
+    <symbol name="MX2" address="BITS:da"/>
+    <symbol name="ADM" address="BITS:db"/>
+    <symbol name="BSY" address="BITS:dc"/>
+    <symbol name="ADEX" address="BITS:dd"/>
     <symbol name="ADCON0.6" address="BITS:de"/>
     <symbol name="ADCON0.7" address="BITS:df"/>
     <symbol name="ACC.0" address="BITS:e0"/>
