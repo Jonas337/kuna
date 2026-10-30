@@ -69,7 +69,6 @@
             version="1.0"
             slafile="8051.sla"
             processorspec="80c517.pspec"
-            manualindexfile="../manuals/8051.idx"
             id="8051:BE:16:80c517">
     <description>Siemens SAB 80C517A/83C517A-5 8051 derivative</description>
     <compiler name="default" spec="8051.cspec" id="default"/>
