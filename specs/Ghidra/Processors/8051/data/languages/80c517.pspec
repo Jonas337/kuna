@@ -47,8 +47,9 @@
     <symbol name="BANK3_R6" address="INTMEM:1e"/>
     <symbol name="BANK3_R7" address="INTMEM:1f"/>
 
-    <!-- SAB 80C517A/83C517A-5 SFR map. DPSEL selects one of eight data pointers;
-         the decompiler still models the selected DP0. -->
+    <!-- SFR names and addresses: Keil REG517A.H.
+         Bit names: SAB 80C517A/83C517A-5 User's Manual, table 3-2.
+         DPSEL 0..7 selects DPTR0..DPTR7; only the selected DPL/DPH is modeled. -->
     <symbol name="P0" address="SFR:80"/>
     <symbol name="SP" address="SFR:81"/>
     <symbol name="DPL" address="SFR:82"/>
